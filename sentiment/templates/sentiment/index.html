@@ -1,0 +1,32 @@
+{% extends "sentiment/header.html" %}
+{% block content %}			
+	 <center>
+<form action="/sentiment/result/" method="post">
+   {% csrf_token %}
+	 <h2 style="color:black;font-weight:bold">Sentiment Analysis</h2>
+	 <h3 style="color:black;font-weight:bold;font-size:20px">Stock Indices Sentiment</h3></center><br>
+<div style="padding-left:80px">
+	<p><strong style="color:black;font-size:15pt;">This use case finds trends in Indices.</strong></p>
+	<p><strong style="color:black;font-size:15pt;">Choose an Index to find the Trend.</strong></p></div>
+	<table>
+<center>
+	 <tr>
+	 	<td style="border: 0px;border-collapse: collapse;"><strong style="color:black;font-size:15pt;margin-left:auto;margin-right:auto;display:block;margin-top:12%;margin-bottom:0%"">    Index:</strong></td>
+	 	<td style="border: 0px;border-collapse: collapse;"> 
+	 		<select style="color:black;font-size:16pt" name="Index">
+	  			<option value="1">NIFTY</option>	
+				<option value="2">SENSEX</option>
+			</select>
+	 	</td>
+	 </tr>
+</table>
+
+		
+        <button type="submit"
+style="color:white;background-color:#3a3938;margin-left:auto;margin-right:auto;display:block;margin-top:12%;margin-bottom:0%">
+Submit</button>
+</form>
+  <br>
+	</center>
+				
+{% endblock %}
